@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+
+<head>
+    <meta charset="UTF-8">
+    <title>Mini Balatro</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+
+
+
+    <h1>Mini Balatro</h1>
+
+    <div id="blind-screen" class="screen">
+        <h2>Selecione a Blind</h2>
+
+        <div id="blind-options"></div>
+    </div>
+
+    <div id="game-screen" class="screen hidden">
+
+        <div id="info">
+            <span>Pontos: <b id="points">0</b></span> |
+            <span>Jogadas: <b id="plays">3</b></span> |
+            <span>Descartes: <b id="discards">2</b></span>
+        </div>
+
+        <div id="hand" class="cards"></div>
+
+        <div class="buttons">
+            <button onclick="playHand()">Jogar Mão</button>
+            <button onclick="discardCards()">Descartar</button>
+        </div>
+
+        <div id="hand-info">
+            <p>Mão atual: <b id="handName">—</b></p>
+        </div>
+
+        <div id="deck-panel">
+            <p>Baralho total: <b>52</b></p>
+            <p>Cartas restantes: <b id="deckCount">52</b></p>
+        </div>
+
+
+        <div id="deck-info">
+            Cartas no baralho: <b id="deckCount">52</b>
+        </div>
+
+
+        <p id="result"></p>
+    </div>
+
+    <div id="blind-result-screen" class="screen hidden">
+        <h2 id="blind-result-title"></h2>
+        <p id="blind-result-text"></p>
+        <button onclick="showBlindSelection()">Continuar</button>
+    </div>
+
+
+
+
+    <script src="game.js" defer></script>
+</body>
+
+</html>
