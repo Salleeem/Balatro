@@ -1,6 +1,10 @@
 * {
     margin: 0;
     color: white;
+    font-family: "m6x11", monospace;
+    font-weight: 200;
+    letter-spacing: 2px;
+    text-shadow: 2px 2px 0 black;
 }
 
 @font-face {
@@ -10,10 +14,7 @@
     font-style: normal;
 }
 
-body {
-    font-family: "m6x11", monospace;
-    font-weight: 500;
-}
+body {}
 
 main {
     background-color: #366f57;
@@ -24,10 +25,133 @@ main {
     width: 350px;
     height: 100%;
     margin-left: 30px;
+    display: flex;
+    flex-direction: column;
 }
+
+
+.middle-info {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    gap: 8px;
+}
+
+.round-score {
+    background-color: #0d1819;
+    display: flex;
+    align-items: center;
+    width: 90%;
+    height: 60px;
+    padding: 10px 10px 10px 5px;
+    border-radius: 10px;
+}
+
+
+.round-score>h4 {
+    flex: 0 0 25%;
+    margin: 0;
+    padding: 0;
+    text-align: center;
+}
+
+.round-score-number {
+    flex: 1;
+    /* ocupa o resto (75%) */
+    background-color: #2c3438;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 12px;
+    height: 100%;
+    border-radius: 10px;
+}
+
+.round-score-number img {
+    width: 30px;
+    padding: 0;
+}
+
+.round-score-number h4 {
+    margin: 0;
+    padding: 0;
+}
+
+.hand {
+    width: 90%;
+    height: 100px;
+    border-radius: 10px;
+    background-color: #0d1819;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-around;
+     padding: 10px;
+}
+
+.hand-text{
+    height: 50%;
+}
+
+.hand-value{
+    display: flex;
+    flex-direction: row;
+    height: 50%;
+    gap: 6px;
+    
+}
+
+.chips-div {
+    background-color: #147fd8;
+    border-radius: 10px;
+    width: 45%;
+    display: flex;
+    align-items: center;
+    justify-content: flex-end; /* cola o número à direita */
+    padding-right: 10px;
+}
+
+
+.x {
+    width: 10%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.x h1 {
+    color: #bb362f;
+    margin: 0;
+    font-size: 3rem;
+    margin-left: 8px;
+      margin-top: 8px;
+}
+
+
+.mult-div {
+    background-color: #d13d34;
+    border-radius: 10px;
+    width: 45%;
+    display: flex;
+    align-items: center;
+    justify-content: flex-start; /* cola o número à esquerda */
+    padding-left: 10px;
+}
+
+.chips-div h4,
+.mult-div h4 {
+    margin: 0;
+    font-size: 3rem;
+    text-align: center;
+    margin-top: 8px;
+}
+
+
+/* Informações inferiores */
 
 .bottom-info {
     display: flex;
+    flex-direction: row;
 }
 
 .bottom-left-info {
@@ -59,7 +183,11 @@ main {
     padding: 8px;
 }
 
-.hands-div h4, .discards-div h4, .ante-div h4, .round-div h4 {
+.hands-div h4,
+.discards-div h4,
+.ante-div h4,
+.round-div h4,
+.round-score h4 {
     margin: 0;
     font-size: 1.5rem;
 }
@@ -105,7 +233,7 @@ main {
 .discards-body h3 {
     color: #f1483d;
     margin: 0;
-     font-size: 1.8rem;
+    font-size: 1.8rem;
 }
 
 
@@ -195,6 +323,7 @@ main {
 .round-body h3 {
     color: #e2aa4f;
     margin: 0;
+    font-size: 1.5rem;
 }
 
 .run-info-button {
@@ -204,6 +333,12 @@ main {
     display: flex;
     align-items: center;
     justify-content: center;
+    box-shadow: 2px 2px 0 0 black;
+}
+
+.run-info-button:hover {
+    background-color: #d13d34;
+    width: 100%;
 }
 
 .run-info-button h3 {
@@ -219,6 +354,11 @@ main {
     display: flex;
     align-items: center;
     justify-content: center;
+    box-shadow: 2px 2px 0 0 black;
+}
+
+.options-button:hover {
+    background-color: #9c4f04;
 }
 
 .options-button h3 {
